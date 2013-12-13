@@ -1,0 +1,396 @@
+/* initial starting file */
+.site {
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+}
+.site-header h1 a:hover, .site-header h2 a:hover {
+    color: @brand-orchid-dark;
+}
+.site-header {
+    h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+}
+.header-image {
+    margin-top: 24px;
+}
+body {
+    .site {
+        margin-top: 3px;
+        margin-bottom: 48px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-width: 15px;
+        border-top-style: solid;
+        border-color: @brand-moss;
+        background: @paper;
+        color:@body-txt-col;
+        @header-txt
+    }
+}
+p {
+    color:@body-txt-col;
+    @header-txt
+}
+h1,h2,h3,h4,h5,h6 {
+    clear: both;
+    @body-txt:
+    color:@body-txt-col;
+    font-weight: 600;
+}
+
+
+.main-navigation {
+    a {
+        color: #5e5e5e;
+    }
+    a:hover {
+        color: @brand-orchid-dark;
+    }
+    li {
+        ul {
+            li {
+                a {
+                    background-color: #efefef;
+                    border-bottom-color: #ededed;
+                }
+            }
+        }
+        a {
+            color: #6a6a6a;
+            text-transform: uppercase;
+        }
+    }
+}
+.main-navigation ul.nav-menu, .main-navigation div.nav-menu &>ul {
+    @body-txt:
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: @brand-orchid;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: @brand-orchid;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+a {
+    outline-width: medium;
+    outline-style: none;
+    color: @brand-orchid-dark;
+}
+a:hover {
+    color:@brand-orchid;
+}
+
+
+cite {
+    font-style: normal;
+}
+
+
+
+hr.faded_green {
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 2px;
+    margin: 1.4em 0;
+    border: none;
+    background: #ddd;
+    background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0, rgb(255,255,255)),color-stop(0.2, rgb(214,226,42)),color-stop(0.8, rgb(214,226,42)),color-stop(1, rgb(255,255,255)));
+    background-image: -moz-linear-gradient(left center,rgb(255,255,255) 0%,rgb(214,226,42) 20%,rgb(214,226,42) 80%,rgb(255,255,255) 100%);
+}
+hr.faded_purple {
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 2px;
+    margin: 1.4em 0;
+    border: none;
+    background: #ddd;
+    background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0, rgb(255,255,255)),color-stop(0.2, rgb(200,107,168)),color-stop(0.8, rgb(200,107,168)),color-stop(1, rgb(255,255,255)));
+    background-image: -moz-linear-gradient(left center,rgb(255,255,255) 0%,rgb(200,107,168) 20%,rgb(200,107,168) 80%,rgb(255,255,255) 100%);
+}
+hr.carved {
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 2px;
+    margin: 1.4em 0;
+    border: none;
+    background: #ddd;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5, rgb(200,107,168)),color-stop(0.5, rgb(255,255,255)));
+    background-image: -moz-linear-gradient(center top,rgb(200,107,168) 50%,rgb(255,255,255) 50%);
+}
+hr {
+	background-color: @brand-moss;
+    border: 0;
+    height: 1px;
+    margin: 3px;
+    margin-bottom: 1em;
+}
+
+small {
+    font-size: 75%;
+}
+strong {
+    font-weight: bold;
+}
+
+
+samp {
+    font-style: normal;
+}
+abbr.initialism {
+    font-size: 90%;
+    text-transform: uppercase;
+}
+abbr[title] {
+    cursor: help;
+    border-bottom: 1px dotted #4F5A61;
+}
+
+em {
+    font-style: italic;
+}
+
+var {
+    font-family: 'Marcellus', serif;
+    font-size:120%;
+    font-weight: 420;
+}
+code {
+    padding: 2px 4px;
+    font-family: 'Ubunto Mono',Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 12px;
+    color: #d14;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+
+
+			
+/* CLASSES  //////////////////////////////////
+			<span class="emerald">...</span>*/
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+.circle {
+    border-radius: 50%;
+    background: @brand-moss;
+    width: 3em;
+    height: 3em;
+}
+.text-primary {
+    color: @magentaPurple;
+}
+.text-muted {
+    color: @paloma;
+}
+.text-warning {
+    color: @celosiaOrange;
+}
+.text-error {
+    color: @celosiaOrange;
+    font-style: italic;
+}
+.text-center {
+    text-align: center;
+}
+.text-info {
+    color: @dazzlingBlue;
+}
+.text-danger {
+    color: @cayenne;
+    font-weight: bold;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-success {
+    color: @comfrey;
+}
+.highlight {
+    background: #ffff99;
+}
+
+
+.muted {
+    color: @paloma;
+}
+
+.affix {
+    position: fixed;
+}
+.lead {
+    margin-bottom: .5em;
+    font-size: 1.2em;
+    font-weight: 360;
+    line-height: 1.5em;
+}
+.lead:first-letter {
+    color: #45454C;
+    font-size:x-large;
+}
+
+/* psudos  */
+::-moz-selection {
+    color: #6600CC;
+    background: #fff2a8;
+}
+::selection {
+    color: #6600CC;
+    background: #fff2a8;
+}
+
+
+
+/* BOX CLASSES */
+
+.well-large {
+    padding: 24px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+div.info-box {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    display: block;
+    width:220px;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: left;
+    border: 5px;
+    border-color: @brand-orchid;
+    background-color: @brand-moss;
+}
+.well-small {
+    padding: 9px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.well {
+    min-height: 20px;
+    margin: 20px 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: @brand-orchid-pale;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    blockquote {
+        border-color: #ddd;
+        border-color: rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* IMAGE FX CLASSES */
+.raised {
+    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+/*  Theme Colored elements */
+
+/*  Brand Colors by Class
+--------------------------------------------------------------------------- */
+p.pvc_green{background: @brand-moss; color: @body-txt-col;}
+p.pvc_green_dark {background: @brand-moss-dark; color: @brand-moss-pale;}
+p.pvc_purple {background: @brand-orchid; color: @brand-moss-pale;}
+p.pvc_purple_dark {background: @brand-orchid-dark; color: @brand-moss-pale;}
+p.pvc_text {background: @body-txt-col; color: @brand-moss-pale;}
+p.pvc_paper {background: @brand-moss-pale; color: @body-txt-col;}
+
+/*  Pantone 2014 Spring Forecast Colors by Class
+--------------------------------------------------------------------------- */
+p.placidBlue {background: @placidBlue;}
+p.violetTulip {background: @violetTulip;}
+p.hemlock {background: @hemlock;}
+p.paloma {background: @paloma;}
+p.sand {background: @sand;}
+p.freesia {background: @freesia;}
+p.cayenne {background: @cayenne;}
+p.celosiaOrange {background: @celosiaOrange;}
+p.radiantOrchid {background: @radiantOrchid;}
+p.dazzlingBlue {background: @dazzlingBlue;}
+p.purpleHaze {background: @purpleHaze;}
+p.comfrey {background: @comfrey;}
+p.magentaPurple {background: @magentaPurple;}	
+
+
+/* IDs  //////////////////////////////////
+			<span ID="emerald">...</span>
+			<p id="pvc_greenTxt">...</p>*/
+#pvc_greenTxt {color: @brand-moss;}
+#pvc_purpleTxt {color: @brand-orchid;}
+#pvc_green {color: @brand-moss;}
+#pvc_green_dark {color: @brand-moss-dark;}
+#pvc_purple {color: @brand-orchid;}
+#pvc_purple_dark {color: @brand-orchid-dark;}
+
+/*  Pantone 2013 Fall Forecast Colors by ID
+--------------------------------------------------------------------------- */
+/* <span id="emerald">...</span>*/
+#emerald {color: @emerald;}
+#violet {color: @violet;}
+#monaco {color: @monaco;}
+#acai {color: @acai;}
+#mykonos {color: @mykonos;}
+#lichen {color: @lichen;}
+#grayjade {color: @grayjade;}
+#caraf {color: @caraf;}
+#linden {color: @linden;}
+#tendershoot {color: @tendershoot;}
+#vivacious {color: @vivacious;}
+#samba {color: @samba;}
+#poppy {color: @poppy;}
+/*  Pantone 2014 Spring Forecast Colors by ID
+--------------------------------------------------------------------------- */
+#placidBlue {color: @placidBlue;}
+#violetTulip {color: @violetTulip;}
+#hemlock {color: @hemlock;}
+#paloma {color: @paloma;}
+#sand {color: @sand;}
+#freesia {color: @freesia;}
+#cayenne {color: @cayenne;}
+#celosiaOrange {color: @celosiaOrange;}
+#radiantOrchid {color: @radiantOrchid;}
+#dazzlingBlue {color: @dazzlingBlue;}
+#purpleHaze {color: @purpleHaze;}
+#comfrey {color: @comfrey;}
+#magentaPurple {color: @magentaPurple;}
+
