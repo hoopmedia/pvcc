@@ -1,6 +1,9 @@
 /* 	initial starting file 
-	requires variables.less
+	requires pvcc-variables.less
 */
+@import "pvcc-variables.less";
+
+/* Main theme styles */
 .site {
     margin: 0 auto;
     max-width: 960px;
@@ -34,16 +37,16 @@ body {
         border-color: @brand-moss;
         background: @paper;
         color:@body-txt-col;
-        @header-txt
+        font-family: @header-txt;
     }
 }
 p {
     color:@body-txt-col;
-    @header-txt
+    font-family: @header-txt;
 }
 h1,h2,h3,h4,h5,h6 {
     clear: both;
-    @body-txt:
+    font-family: @body-txt;
     color:@body-txt-col;
     font-weight: 600;
 }
@@ -71,8 +74,9 @@ h1,h2,h3,h4,h5,h6 {
         }
     }
 }
+
 .main-navigation ul.nav-menu, .main-navigation div.nav-menu &>ul {
-    @body-txt:
+    font-family:@body-txt;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: @brand-orchid;
@@ -98,6 +102,11 @@ cite {
     font-style: normal;
 }
 
+.btn-orchid 
+{ background-color: hsl(300, 39%, 32%) !important; background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="@brand-orchid-btn-pale", endColorstr="@brand-orchid-btn"); background-image: -khtml-gradient(linear, left top, left bottom, from(@brand-orchid-btn-pale), to(@brand-orchid-btn)); background-image: -moz-linear-gradient(top, @brand-orchid-btn-pale, @brand-orchid-btn); background-image: -ms-linear-gradient(top, @brand-orchid-btn-pale, @brand-orchid-btn); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @brand-orchid-btn-pale), color-stop(100%, @brand-orchid-btn)); background-image: -webkit-linear-gradient(top, @brand-orchid-btn-pale, @brand-orchid-btn); background-image: -o-linear-gradient(top, @brand-orchid-btn-pale, @brand-orchid-btn); background-image: linear-gradient(@brand-orchid-btn-pale, @brand-orchid-btn); border-color: @brand-orchid-btn @brand-orchid-btn hsl(300, 39%, 23.5%); color: #fff !important; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.56); -webkit-font-smoothing: antialiased; }
+
+.btn-moss 
+{ background-color: hsl(66, 71%, 43%) !important; background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="@brand-moss-btn-pale", endColorstr="@brand-moss-btn"); background-image: -khtml-gradient(linear, left top, left bottom, from(@brand-moss-btn-pale), to(@brand-moss-btn)); background-image: -moz-linear-gradient(top, @brand-moss-btn-pale, @brand-moss-btn); background-image: -ms-linear-gradient(top, @brand-moss-btn-pale, @brand-moss-btn); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @brand-moss-btn-pale), color-stop(100%, @brand-moss-btn)); background-image: -webkit-linear-gradient(top, @brand-moss-btn-pale, @brand-moss-btn); background-image: -o-linear-gradient(top, @brand-moss-btn-pale, @brand-moss-btn); background-image: linear-gradient(@brand-moss-btn-pale, @brand-moss-btn); border-color: @brand-moss-btn @brand-moss-btn hsl(66, 71%, 33%); color: #333 !important; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.66); -webkit-font-smoothing: antialiased; }
 
 
 hr.faded_green {
@@ -170,6 +179,7 @@ var {
     font-size:120%;
     font-weight: 420;
 }
+
 code {
     padding: 2px 4px;
     font-family: 'Ubunto Mono',Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -193,19 +203,8 @@ code {
 .invisible {
     visibility: hidden;
 }
-.pull-left {
-    float: left;
-}
 
-.pull-right {
-    float: right;
-}
-.circle {
-    border-radius: 50%;
-    background: @brand-moss;
-    width: 3em;
-    height: 3em;
-}
+
 .text-primary {
     color: @magentaPurple;
 }
@@ -219,15 +218,23 @@ code {
     color: @celosiaOrange;
     font-style: italic;
 }
-.text-center {
-    text-align: center;
-}
+
 .text-info {
     color: @dazzlingBlue;
 }
 .text-danger {
     color: @cayenne;
     font-weight: bold;
+}
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+.text-center {
+    text-align: center;
 }
 .text-right {
     text-align: right;
@@ -239,10 +246,8 @@ code {
     color: @comfrey;
 }
 .highlight {
-    background: #ffff99;
+    background: @hiliter-yelo;
 }
-
-
 .muted {
     color: @paloma;
 }
@@ -257,21 +262,27 @@ code {
     line-height: 1.5em;
 }
 .lead:first-letter {
-    color: #45454C;
+    color: @dark-gray;
     font-size:x-large;
 }
 
 /* psudos  */
 ::-moz-selection {
-    color: #6600CC;
-    background: #fff2a8;
+    color: @bright-purple;
+    background: @hiliter-yelo;
 }
 ::selection {
-    color: #6600CC;
-    background: #fff2a8;
+    color: @bright-purple;
+    background: @hiliter-yelo;
 }
 
-
+/* shapes */
+.circle {
+    border-radius: 50%;
+    background: @brand-moss;
+    width: 50px;
+    height: 50px;
+}
 
 /* BOX CLASSES */
 
